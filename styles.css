@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 560px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    color: #0a0a0a;
+    margin-bottom: 16px;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #525252;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+}
+
+.location {
+    font-size: 16px;
+    font-weight: 400;
+    color: #a3a3a3;
+    letter-spacing: 0.01em;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+}
+
+.link {
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+    color: #171717;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    transition: all 0.2s ease;
+    text-align: center;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #0a0a0a;
+    transition: width 0.2s ease;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.link svg {
+    transition: none;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 30px 20px;
+    }
+
+    .profile {
+        margin-bottom: 56px;
+    }
+
+    .name {
+        font-size: 56px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .location {
+        font-size: 15px;
+    }
+
+    .link {
+        font-size: 18px;
+    }
+
+    .link::after {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .profile {
+        margin-bottom: 48px;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+
+    .title {
+        font-size: 17px;
+    }
+
+    .location {
+        font-size: 14px;
+    }
+
+    .link {
+        font-size: 17px;
+    }
+}
